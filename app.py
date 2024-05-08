@@ -7,32 +7,25 @@ st.write('The user entered:', user_input)
 
 import streamlit.components.v1 as components
 
-_ = components.html(
-    """
+google_analytics_js = """
+<!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-D39YXHSX0V"
+    ></script>
     <script>
-    function loadScript(url) {       
-        return new Promise(function(resolve, reject) {
-            // Add the script to the main page, not the component iframe
-            const doc = window.parent.document;
-            var head = doc.getElementsByTagName('head')[0];
-            var script = doc.createElement('script');
-            script.type = 'text/javascript';
-            script.src = url;
-            script.async = true;
-            script.onload = resolve;
-            head.appendChild(script);
-        });
-    }
-    
-    loadScript('https://www.googletagmanager.com/gtag/js?id=G-D39YXHSX0V').then( () => {
-        // Initialize Google Analytics
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-D39YXHSX0V');
-    });
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-D39YXHSX0V");
     </script>
-    """,
-    height=0,
-    width=0,
-)
+    """
+#st.components.v1.html(google_analytics_js)
+fb_comments = """
+        <div class="fb-comments" data-href="https://covid19.aipert.org" data-numposts="5" data-width=""></div>
+        """
+#st.components.v1.html(fb_comments)
+st.components.v1.iframe('https://912-app-test-2mzhv9bgobnsxgnuga9n7e.streamlit.app/', height=1, scrolling=False)
