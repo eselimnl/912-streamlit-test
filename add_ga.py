@@ -28,5 +28,3 @@ def inject_ga():
         html = str(soup)
         new_html = html.replace('<head>', '<head>\n' + GA_SCRIPT)
         index_path.write_text(new_html)
-
-inject_ga()
