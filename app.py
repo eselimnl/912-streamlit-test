@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 import logging
 import shutil
 
-st.title('My First Streamlit App')
+st.title('My ESU Streamlit App')
 
 user_input = st.text_input("Enter some text")
 st.write('The user entered:', user_input)
