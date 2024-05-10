@@ -18,20 +18,6 @@ def inject_google_analytics():
 
     # Display the Google Analytics script
     st.markdown(google_analytics_js, unsafe_allow_html=True)
-
-# Main Streamlit app
-def main():
-    st.title('My Streamlit App')
-
-    # Inject Google Analytics script
-    inject_google_analytics()
-
-    # Your app content goes here
-    st.write("Welcome to my Streamlit app!")
-
-# Entry point of the app
-if __name__ == "__main__":
-    main()
 #this code below is the statcounter tracking code
 statcounter= """
 
@@ -50,5 +36,19 @@ src="https://c.statcounter.com/12997381/0/8ce07403/1/" alt="Web Analytics"
 referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
 <!-- End of Statcounter Code --
 """
+# Main Streamlit app
+def main():
+    st.title('My Streamlit App')
 
-components.html(statcounter,width=200, height=200)   
+    # Inject Google Analytics script
+    inject_google_analytics()
+
+    # Your app content goes here
+    st.write("Welcome to my Streamlit app!")
+    components.html(statcounter,width=200, height=200)  
+# Entry point of the app
+if __name__ == "__main__":
+    main()
+
+
+ 
