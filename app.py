@@ -21,7 +21,7 @@ def statcounter():
     referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
     <!-- End of Statcounter Code --
     """
-    components.html(statcounter,width=200, height=200)  
+#components.html(statcounter,width=200, height=200)  
 
 cookie_banner = """
 <div id="cookie-banner" style="position: fixed; bottom: 0; left: 0; width: 100%; background-color: #f1f1f1; padding: 10px; text-align: center;">
