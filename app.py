@@ -32,13 +32,13 @@ cookie_banner = """
 <script>
 function acceptCookies() {
     var gaScript = document.createElement('script');
-    gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-D39YXHSX0V';
+    gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-8H46WZXW14';
     document.head.appendChild(gaScript);
 
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-D39YXHSX0V');
+    gtag('config', 'G-8H46WZXW14');
 
     document.getElementById('cookie-banner').style.display = 'none';
 }
@@ -56,7 +56,7 @@ def main():
 
     # Inject Google Analytics script
     # Your app content goes here
-    st.write("Welcome to my Streamlit app!")
+    st.write("Welcome to my Streamlit app test version!")
     #statcounter()
     html(cookie_banner)
 # Entry point of the app
