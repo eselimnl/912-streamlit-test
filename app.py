@@ -65,6 +65,7 @@ def main():
     st.session_state['track_statcounter'] = 'yes'
     html(cookie_banner)
     if st.session_state.track_statcounter:
+        st.title('YOU ARE TRACKED!!')
         statcounter()
 # Entry point of the app
 if __name__ == "__main__":
