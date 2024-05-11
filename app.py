@@ -62,7 +62,10 @@ def main():
     # Your app content goes here
     st.write("Welcome to my Streamlit app test version!")
     #statcounter()
+    st.session_state['track_statcounter'] = 'yes'
     html(cookie_banner)
+    if st.session_state.track_statcounter:
+        statcounter()
 # Entry point of the app
 if __name__ == "__main__":
     main()
