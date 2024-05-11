@@ -31,15 +31,14 @@ cookie_banner = """
 
 <script>
 function acceptCookies() {
-    // Add Google Analytics tag
     var gaScript = document.createElement('script');
-    gaScript.innerHTML = `
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-D39YXHSX0V');
-    `;
+    gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-D39YXHSX0V';
     document.head.appendChild(gaScript);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-D39YXHSX0V');
 
     document.getElementById('cookie-banner').style.display = 'none';
 }
