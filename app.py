@@ -33,12 +33,16 @@ cookie_banner = """
 function acceptCookies() {
     var gaScript = document.createElement('script');
     gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-8H46WZXW14';
+    gaScript.onload = function() {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-8H46WZXW14');
+    };
+    gaScript.onerror = function() {
+        console.error('Failed to load Google Analytics script');
+    };
     document.head.appendChild(gaScript);
-
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-8H46WZXW14');
 
     document.getElementById('cookie-banner').style.display = 'none';
 }
