@@ -1,6 +1,5 @@
 import streamlit as st
 from streamlit.components.v1 import html
-from streamlit_modal import Modal
 #this code below is the statcounter tracking code
 
 def statcounter():
@@ -51,7 +50,6 @@ function rejectCookies() {
 </script>
 """
 
-html(cookie_banner)
 
 # Main Streamlit app
 def main():
@@ -61,6 +59,7 @@ def main():
     # Your app content goes here
     st.write("Welcome to my Streamlit app!")
     #statcounter()
+    html(cookie_banner)
 # Entry point of the app
 if __name__ == "__main__":
     main()
