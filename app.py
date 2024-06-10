@@ -56,7 +56,7 @@ function rejectCookies() {
 
 # Main Streamlit app
 def main():
-    st.title('My Streamlit App for myselfESU')
+    st.title('My Streamlit App for testing purposes')
 
     # Inject Google Analytics script
     # Your app content goes here
